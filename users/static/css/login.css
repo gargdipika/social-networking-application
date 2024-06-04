@@ -1,0 +1,52 @@
+.background-container {
+    background-color: #FAF9F6;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    cursor: pointer;
+    border-radius:10px;
+    height: 35px;
+    width: 250px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 320px;
+}
+.form-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+}
+.user-input1{
+    height: 20px;
+    width: 250px;
+    background-color: #FAF9F6;
+}
+.user-input2{
+    height: 20px;
+    width: 248px;
+    background-color: #FAF9F6;
+}
+.heading{
+    text-align: center;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.error_message{
+    color: red;
+}

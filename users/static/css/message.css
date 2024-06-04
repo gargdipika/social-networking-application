@@ -1,0 +1,9 @@
+.background-container {
+    background-color: #FAF9F6;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

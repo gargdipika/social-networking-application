@@ -1,0 +1,93 @@
+.background-container {
+    background-color: #FAF9F6;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading{
+    margin-bottom: 0px;
+}
+.button{
+    cursor: pointer;
+    border-radius:10px;
+    height: 35px;
+    width: 150px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.button-pending-accepted{
+    border-radius:10px;
+    height: 35px;
+    width: 150px;
+    margin: 5px;
+    background-color: #888888;
+    color: white;
+    border: none;
+}
+.button-reject-accept{
+    cursor: pointer;
+    border-radius:10px;
+    height: 27px;
+    width: 150px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.button-card{
+    display: flex;
+}
+.user_input{
+    border-radius:10px;
+    height: 15px;
+    width: 300px;
+    margin: 5px;
+    padding: 10px;
+    border-style: none;
+    background-color: #D3D3D3;
+}
+.search_button{
+    cursor: pointer;
+    border-radius:10px;
+    height: 35px;
+    width: 100px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.friendship-card{
+    width: 320px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    border-style: none;
+    background-color: #D3D3D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-result{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.path-card{
+    justify-content: space-between;
+    display: flex;
+    width: 130px;
+}
+
+.button_card{
+    display: flex;
+    flex-direction: column;
+   
+}

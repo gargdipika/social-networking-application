@@ -1,0 +1,33 @@
+.friendship-card{
+    width: 270px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    border-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #D3D3D3;
+}
+
+.background-container {
+    background-color: #FAF9F6;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    margin-bottom: 0px;
+}
+.friends-list{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}

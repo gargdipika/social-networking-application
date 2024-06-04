@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "fbcc444f-19d5-44d6-b525-7bd85cb737eb",
+		"name": "social_network_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "35988803"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csrfmiddlewaretoken",
+							"value": "XszLKE4Mo374GDpSr2CRwfrZsVMj5gGfSzEXhpPKUOy1YZKSsNNXCT2dsw4nwxr0",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "testuser22@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password1",
+							"value": "azsxdc@1",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "azsxdc@1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "testuser1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "azsxdc@1",
+							"type": "text"
+						},
+						{
+							"key": "csrfmiddlewaretoken",
+							"value": "dpmbo7crThV3Qiryz1s9emEEcFGGcrINolUqQlAn4cvIUUv2xdkfpUYQqii3V35M",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "home_page",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "search_users_based_on_username_and_email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/?q=user&page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "user"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pending_friend_requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/pending_friend_request/?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"pending_friend_request",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friends_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/friends/?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"friends",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send_friend_request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "to_user_name",
+							"value": "testuser10@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "csrfmiddlewaretoken",
+							"value": "nId4qPvdPD4v9wE7V6zmmiC7lu51fZkTSPvVYgjpjSVwGJRuw08WvcyW6wvMrmlu",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/send_friend_request/"
+			},
+			"response": []
+		},
+		{
+			"name": "accept_friend_request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csrfmiddlewaretoken",
+							"value": "c1NT5uIbtd75gBHSILQuHPwfhd51VVodH85KDVwnXsY6NOUfjFp4QJs42fvM7ipO",
+							"type": "text"
+						},
+						{
+							"key": "friend_request_username",
+							"value": "testuser20@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/accept_friend_request/"
+			},
+			"response": []
+		},
+		{
+			"name": "reject_friend_request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csrfmiddlewaretoken",
+							"value": "B9aunOdFA8mfB1XpxaTBTMO6GYcOYdmmVQmjcFUbZXQVJgNwtvRgHrz9m4b8PWpb",
+							"type": "text"
+						},
+						{
+							"key": "friend_request_username",
+							"value": "testuser1@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/reject_friend_request/"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csrfmiddlewaretoken",
+							"value": "b1w5OmiKg1nIkyq1ODN6u0Aq6AV6PqBVvIIUDdZgFQRosNg8KYLLiFltMGUqG9EK",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/logout/"
+			},
+			"response": []
+		},
+		{
+			"name": "admin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/admin/"
+			},
+			"response": []
+		},
+		{
+			"name": "admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csrfmiddlewaretoken",
+							"value": "93br5iCOFdQVEYXQX0PCos7OdPlw6fUStKngU9jk42kBMdNXTlNhc7SRTVkQXYXH",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/admin"
+			},
+			"response": []
+		},
+		{
+			"name": "admin_logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csrfmiddlewaretoken",
+							"value": "Zw9pDxeYQAj2tsDnzTZxiRBLKLPpNsW0UDeBaiZWmlKZLOYnAEaDovcZKm7teJHL",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/admin/logout/"
+			},
+			"response": []
+		}
+	]
+}

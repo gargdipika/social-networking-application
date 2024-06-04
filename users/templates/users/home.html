@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <title>Home Page</title>
+    </head>
+    <body>
+        <div class="background-container">
+            {% if user.is_authenticated %}
+                <h2>Welcome {{ user.username }}!</h2>
+                {% comment %} <button><a href="{% url 'profile' %}">Profile</a></button> {% endcomment %}
+
+                <form method="GET" action="">
+                    <input class="user_input" type="text" name="q" placeholder="Search by username or email..." value="{{ request.GET.q }}">
+                    <button class="search_button" type="submit">Search</button>
+                </form>
+                
+                {% if page_obj %}
+                    <h2>Search Results</h2>
+                    <div class="search-result">
+                        {% for search_user in page_obj %}
+                            {% if search_user.username != user.username %}
+                                <div class="friendship-card">
+                                    <p>{{ search_user.username }}</p>
+                                    <form method="post" action="{% url 'send_friend_request' %}">
+                                        {% csrf_token %}
+                                        <input value='{{ search_user.username }}' style="display: none;" name="to_user_name"/>
+                                        {% if search_user.username in accepted_friend_list %}
+                                            <button class="button-pending-accepted">Friend</button>
+                                        {% elif search_user.username|stringformat:"s"|add:"_touser" in pending_friend_list %}
+                                            <button class="button-pending-accepted">Requested</button>
+                                        {% elif search_user.username|stringformat:"s"|add:"_fromuser" in pending_friend_list %}
+                                            <button class="button-pending-accepted">Pending on you</button>
+                                            {% comment %} <div class="button_card">
+                                                <form method="post" action="{% url 'accept_friend_request' %}">
+                                                    {% csrf_token %}
+                                                    <input value='{{ pending_req.from_user }}' style="display: none;"  name="friend_request_username"/>
+                                                    <button class="button-reject-accept" type="submit">Accept</button>
+                                                </form>
+                                                <form method="post" action="{% url 'reject_friend_request' %}">
+                                                    {% csrf_token %}
+                                                    <input value='{{ pending_req.from_user }}' style="display: none;" name="friend_request_username"/>
+                                                    <button class="button-reject-accept" type="submit">Reject</button>
+                                                </form>
+                                            </div> {% endcomment %}
+                                        {% else  %}
+                                            <button class="button" type="submit">Send Friend Request</button>
+                                        {% endif %}
+                                    </form>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                            </div>
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if page_obj.has_previous %}
+                                <a href="?q={{ query }}&page=1">&laquo; First</a>
+                                <a href="?q={{ query }}&page={{ page_obj.previous_page_number }}">Previous</a>
+                            {% endif %}
+
+                            <span class="current">
+                                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                            </span>
+
+                            {% if page_obj.has_next %}
+                                <a href="?q={{ query }}&page={{ page_obj.next_page_number }}">Next</a>
+                                <a href="?q={{ query }}&page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                            {% endif %}
+                        </span>
+                    </div>
+                {% else %}
+                    {% if request.GET.q %}
+                        <p>No results found for "{{ request.GET.q }}"</p>
+                    {% endif %}
+                {% endif %}
+
+                <div class="button-card">
+                    <form method="GET" action="{% url 'pending_friend_request' %}">
+                        <button class="button" type="submit">Pending Requests</button>
+                    </form>
+                    <form method="GET" action="{% url 'friends' %}">
+                        <button class="button" type="submit">Friends</button>
+                    </form>
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button class="button" type="submit">Log out</button>
+                    </form>
+                </div>
+            {% else %}
+                <h1>Please Login or Signup to access the application</h1>
+                <div class="path-card">
+                    <a href="{% url 'login' %}">Login</a>
+                    <a href="{% url 'signup' %}">Sign Up</a>
+                </div>
+            {% endif %}
+        </div>
+    </body>
+</html>

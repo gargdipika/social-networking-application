@@ -1,0 +1,29 @@
+<!-- signup.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <form method="post" class="background-container">
+        {% csrf_token %}
+        <p>Create an account to get started</p>
+        
+        <div >
+            <input class="user_input" type="email" placeholder="Email" name="email" maxlength="100" required id="id_email">
+            <br/>
+            <input class="user_input" type="password" placeholder="Password" name="password1" autocomplete="new-password" required aria-describedby="id_password1_helptext" id="id_password1">
+            <br/>
+            
+            <input class="user_input" type="password" placeholder="Enter Password Again" name="password2" autocomplete="new-password" required aria-describedby="id_password2_helptext" id="id_password2">
+            <br/>
+            <p class="error_message">{{ error_message }}</p>
+
+        </div>
+        <button class="button" type="submit">Sign Up</button>
+        <p>Already have an account? <a href="{% url 'login' %}">Log In</a></p>
+    </form>
+</body>
+</html>

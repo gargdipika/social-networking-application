@@ -1,0 +1,46 @@
+.friendship-card{
+    width: 320px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    border-style: none;
+    background-color: #D3D3D3;
+}
+
+.background-container {
+    background-color: #FAF9F6;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_card{
+    display: flex;
+
+}
+
+.button{
+    border-radius:10px;
+    height: 35px;
+    width: 150px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.user_name{
+    margin-left: 5px;
+}
+
+.pending-request-result{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}

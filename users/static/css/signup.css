@@ -1,0 +1,35 @@
+.background-container {
+    background-color: #FAF9F6;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_message{
+    color: red;
+}
+
+.user_input{
+    border-radius:10px;
+    height: 20px;
+    width: 300px;
+    margin: 5px;
+    padding: 10px;
+    border-style: none;
+
+    background-color: #D3D3D3;
+}
+
+.button{
+    cursor: pointer;
+    border-radius:10px;
+    height: 35px;
+    width: 320px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+}
