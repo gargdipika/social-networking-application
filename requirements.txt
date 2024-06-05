@@ -1,3 +1,4 @@
-django
-djangorestframework
-django-rest-framework
+django==5.0.6
+djangorestframework==3.15.1
+django-rest-framework==0.1.0
+virtualenv==20.26.2

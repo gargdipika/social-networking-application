@@ -9,14 +9,23 @@
 <body class="background-container">
 
     <form method="post" class="form_element">
-        {% csrf_token %}
-            <p class="heading">Login to your account</p>
-            <p class="card">{{ form.username.label_tag }} <span class="user-input1">{{ form.username }}</span></p>
-            <p class="card">{{ form.password.label_tag }} <span class="user-input2">{{ form.password }}</span></p>
-            <p class="error_message">{{ error_message }}</p>
-            <button class="button" type="submit">Login</button> 
-            <p class="heading">Are you a new user? <a href="{% url 'signup' %}">Sign Up</a></p>
-        
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+        <p class="heading">Login to your account</p>
+        <p class="card">
+            <label for="id_email">Email:</label> 
+            <span class="user-input1">
+                <input type="email" name="email" maxlength="150" required id="id_email">
+            </span>
+        </p>
+        <p class="card">
+            <label for="id_password">Password:</label> 
+            <span class="user-input2">
+                <input type="password" name="password" autocomplete="current-password" required id="id_password">
+            </span>
+        </p>
+        <p class="error_message">{{ error_message }}</p>
+        <button class="button" type="submit">Login</button>
+        <p class="heading">Are you a new user? <a href="/signup/">Sign Up</a></p>
     </form>
 </body>
 </html>

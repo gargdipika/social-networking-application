@@ -8,7 +8,7 @@
     <body>
         <div class="background-container">
             {% if page_obj %}
-                <h2>Pending Requests</h2>
+                <h2>Pending requests for {{user.username}}</h2>
                 <div class="pending-request-result">
                     {% for pending_req in page_obj %}
                         <div class="friendship-card">

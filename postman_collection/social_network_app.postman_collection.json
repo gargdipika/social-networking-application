@@ -2,10 +2,33 @@
 	"info": {
 		"_postman_id": "fbcc444f-19d5-44d6-b525-7bd85cb737eb",
 		"name": "social_network_app",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "35988803"
 	},
 	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
 		{
 			"name": "signup",
 			"request": {
@@ -16,12 +39,12 @@
 					"formdata": [
 						{
 							"key": "csrfmiddlewaretoken",
-							"value": "XszLKE4Mo374GDpSr2CRwfrZsVMj5gGfSzEXhpPKUOy1YZKSsNNXCT2dsw4nwxr0",
+							"value": "{{csrfmiddlewaretoken}}",
 							"type": "text"
 						},
 						{
 							"key": "email",
-							"value": "testuser22@gmail.com",
+							"value": "testuser37@gmail.com",
 							"type": "text"
 						},
 						{
@@ -36,16 +59,21 @@
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/signup/"
-			},
-			"response": []
-		},
-		{
-			"name": "signup",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "http://127.0.0.1:8000/signup/"
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -54,7 +82,21 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8000/login/"
+				"url": {
+					"raw": "http://127.0.0.1:8000/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -67,8 +109,8 @@
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "username",
-							"value": "testuser1@gmail.com",
+							"key": "email",
+							"value": "testuser20@gmail.com",
 							"type": "text"
 						},
 						{
@@ -78,12 +120,26 @@
 						},
 						{
 							"key": "csrfmiddlewaretoken",
-							"value": "dpmbo7crThV3Qiryz1s9emEEcFGGcrINolUqQlAn4cvIUUv2xdkfpUYQqii3V35M",
+							"value": "{{csrfmiddlewaretoken}}",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/login/"
+				"url": {
+					"raw": "http://127.0.0.1:8000/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -91,7 +147,21 @@
 			"name": "home_page",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -195,17 +265,31 @@
 					"formdata": [
 						{
 							"key": "to_user_name",
-							"value": "testuser10@gmail.com",
+							"value": "testuser8@gmail.com",
 							"type": "text"
 						},
 						{
 							"key": "csrfmiddlewaretoken",
-							"value": "nId4qPvdPD4v9wE7V6zmmiC7lu51fZkTSPvVYgjpjSVwGJRuw08WvcyW6wvMrmlu",
+							"value": "{{csrfmiddlewaretoken}}",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/send_friend_request/"
+				"url": {
+					"raw": "http://127.0.0.1:8000/send_friend_request/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"send_friend_request",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -219,44 +303,69 @@
 					"formdata": [
 						{
 							"key": "csrfmiddlewaretoken",
-							"value": "c1NT5uIbtd75gBHSILQuHPwfhd51VVodH85KDVwnXsY6NOUfjFp4QJs42fvM7ipO",
+							"value": "{{csrfmiddlewaretoken}}",
 							"type": "text"
 						},
 						{
 							"key": "friend_request_username",
-							"value": "testuser20@gmail.com",
+							"value": "testuser2@gmail.com",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/accept_friend_request/"
+				"url": {
+					"raw": "http://127.0.0.1:8000/accept_friend_request/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accept_friend_request",
+						""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "reject_friend_request",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "formdata",
 					"formdata": [
 						{
 							"key": "csrfmiddlewaretoken",
-							"value": "B9aunOdFA8mfB1XpxaTBTMO6GYcOYdmmVQmjcFUbZXQVJgNwtvRgHrz9m4b8PWpb",
+							"value": "{{csrfmiddlewaretoken}}",
 							"type": "text"
 						},
 						{
 							"key": "friend_request_username",
-							"value": "testuser1@gmail.com",
+							"value": "testuser10@gmail.com",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/reject_friend_request/"
+				"url": {
+					"raw": "http://127.0.0.1:8000/reject_friend_request/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"reject_friend_request",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -270,12 +379,26 @@
 					"formdata": [
 						{
 							"key": "csrfmiddlewaretoken",
-							"value": "b1w5OmiKg1nIkyq1ODN6u0Aq6AV6PqBVvIIUDdZgFQRosNg8KYLLiFltMGUqG9EK",
+							"value": "{{csrfmiddlewaretoken}}",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/logout/"
+				"url": {
+					"raw": "http://127.0.0.1:8000/logout/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"logout",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -284,7 +407,21 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8000/admin/"
+				"url": {
+					"raw": "http://127.0.0.1:8000/admin/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -298,7 +435,7 @@
 					"formdata": [
 						{
 							"key": "csrfmiddlewaretoken",
-							"value": "93br5iCOFdQVEYXQX0PCos7OdPlw6fUStKngU9jk42kBMdNXTlNhc7SRTVkQXYXH",
+							"value": "{{csrfmiddlewaretoken}}",
 							"type": "text"
 						},
 						{
@@ -313,7 +450,28 @@
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/admin"
+				"url": {
+					"raw": "http://127.0.0.1:8000/admin/login/?next=/admin/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"login",
+						""
+					],
+					"query": [
+						{
+							"key": "next",
+							"value": "/admin/"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -327,14 +485,59 @@
 					"formdata": [
 						{
 							"key": "csrfmiddlewaretoken",
-							"value": "Zw9pDxeYQAj2tsDnzTZxiRBLKLPpNsW0UDeBaiZWmlKZLOYnAEaDovcZKm7teJHL",
+							"value": "{{csrfmiddlewaretoken}}",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/admin/logout/"
+				"url": {
+					"raw": "http://127.0.0.1:8000/admin/logout/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"logout",
+						""
+					]
+				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"var csrfmiddlewaretoken = postman.getResponseCookie(\"csrftoken\");\r",
+					"pm.collectionVariables.set(\"csrfmiddlewaretoken\", csrfmiddlewaretoken.value);"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "csrfmiddlewaretoken",
+			"value": "",
+			"type": "string"
 		}
 	]
 }

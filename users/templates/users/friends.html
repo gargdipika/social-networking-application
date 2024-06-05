@@ -5,12 +5,12 @@
     <head>
         <link rel="stylesheet" type="text/css" href="{% static 'css/friends.css' %}">
 
-        <title>Friend List</title>
+        <title>Friends List</title>
     </head>
     <body>
         <div class="background-container">
             {% if page_obj %}
-                <h2 class="heading">Friends List</h2>
+                <h2 class="heading">Friends list for {{user.username}}</h2>
                 <div class="friends-list">
                     {% for friend in page_obj %}
                     <div class="friendship-card">

@@ -11,10 +11,10 @@ class RegisterForm(UserCreationForm):
 
 
 class EmailAuthenticationForm(AuthenticationForm):
-    username = forms.EmailField(label="Email")
+    email = forms.EmailField(label="Email")
 
     def clean(self):
-        email = self.cleaned_data.get('username')
+        email = self.cleaned_data.get('email')
         try:
             user = User.objects.get(email__iexact=email)
             self.cleaned_data['username'] = user.username
@@ -24,7 +24,6 @@ class EmailAuthenticationForm(AuthenticationForm):
     
     def get_user(self):
         username = self.cleaned_data.get('username')
-        # email = self.cleaned_data.get('email')
         password = self.cleaned_data.get('password')
         try:
             users = User.objects.filter(email=username) | User.objects.filter(username=username)
@@ -32,5 +31,4 @@ class EmailAuthenticationForm(AuthenticationForm):
                 if user.check_password(password):
                     return user
         except User.DoesNotExist:
-
             return None
